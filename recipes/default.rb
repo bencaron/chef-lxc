@@ -27,7 +27,7 @@ include_recipe 'lxc::dns'
 
 host = node[:container]
 
-machines = search(:virtual_machines, "host:#{node['fqdn']}")
+machines = search(node[:lxc][:databag_name], "host:#{node['fqdn']}")
 
 directory host[:base_directory] do
   action :create

@@ -1,3 +1,5 @@
+default[:lxc][:databag_name] = "virtual_machines"
+
 set_unless[:container] = {
   :base_directory => '/tmp/containers',
   :default => {
